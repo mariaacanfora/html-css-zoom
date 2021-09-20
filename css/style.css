@@ -25,14 +25,14 @@ header{
 header button{
     background-color: #232427;
     color: #DCDCDC;
-    padding: 5px 5px;
-    border-radius: 8px;
+    padding: 5px 10px;
+    border-radius: 6px;
 }
 
 main{
     height: calc(100vh - 45px - 54px);
-    margin-bottom: 45px;
-    
+    display: flex;    
+    overflow: hidden;
 }
 
 footer{
@@ -41,6 +41,41 @@ footer{
     justify-content: space-between;
     align-items: center;
     background-color: #232427;
+}
+
+a{
+    color: #DCDCDC;
+    text-decoration: none;
+}
+
+
+/********************************************************************/
+/*  */
+/********************************************************************/
+#number-participant{
+    font-size: 10px;
+    position: absolute;
+    top: 0%;
+}
+
+#mini-arrow{
+    font-size: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+#flavio{
+    transform: scale(1.2);
+    position: relative;
+    top: -19px;
+}
+
+#florian{
+    transform: scale(1.2);
+}
+
+#clelia{
+    transform: scale(1.2);
 }
 
 /********************************************************************/
@@ -52,29 +87,56 @@ footer{
     clear: both;
 }
 
-
-.container{
-    width: 95%;
-    height: 100%;
-    margin: auto;
+/* MAIN */
+.user-container{
+    height: calc(100% - 45px);
     display: flex;
     justify-content: center;
+    align-content: flex-start;
     flex-wrap: wrap;
     position: relative;
+    overflow: hidden;
 }
 
 .user{
-    width: calc(100% / 5);
-    max-width: 200px;
-    border: 1px solid;
-    min-height: 150px;
-    flex-grow: 1;
-
+    border: 4PX solid black;
+    width: calc(100% / 5 - 30px);
+    max-width: 300px;
+    min-width: 250px;
+    min-height: 200px;
+    max-height: 250px;
+    height: calc(100% / 4);
+    flex-shrink: 0;
+    position: relative;
 }
 
 
 .user img{
-    width: 100%;;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user .label{
+    padding: 0 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.404);
+}
+
+.user .label i::after{
+    position: absolute;
+    content: "/";
+    color: red;
+    font-size: 29px;
+    font-weight: bold;
+    left: 7px;
+    bottom: -4px;
+}
+
+.user.florian{
+    border: 4PX solid yellow;
 }
 
 .pagination{
@@ -83,7 +145,14 @@ footer{
     top: 50%;
     padding: 14px 8px;
     text-align: center;
+    transform: translateY(-50%);
 }
+
+.pagination a{
+    display: block;
+    color: #DCDCDC;
+}
+
 
 .pagination.right{
     right: 0;
@@ -97,6 +166,17 @@ footer{
     font-size: 20px;
 }
 
+
+.user.flavio,
+.user.florian,
+.user.clelia{
+    overflow: hidden;
+}
+
+
+
+
+/* FOOTER */
 .icon-row{
     text-align: center;
     position: relative;
@@ -125,18 +205,6 @@ footer{
     top: 50%;
     transform: translate(60%, 50%);
     color: #DCDCDC;
-}
-
-#number-participant{
-    font-size: 10px;
-    position: absolute;
-    top: 0%;
-}
-
-#mini-arrow{
-    font-size: 10px;
-    position: absolute;
-    bottom: 0;
 }
 
 .btn.end-meeting{
