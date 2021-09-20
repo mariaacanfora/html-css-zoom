@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/********************************************************************/
+/* TAG */
+/********************************************************************/
+body{
+    background-color: black;
+    color: #DCDCDC;
+    font: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+header{
+    height: 45px;
+    padding-right: 8px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header button{
+    background-color: #232427;
+    color: #DCDCDC;
+    padding: 5px 5px;
+    border-radius: 8px;
+}
+
+main{
+    height: calc(100vh - 45px - 54px);
+    margin-bottom: 45px;
+    
+}
+
+footer{
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #232427;
+}
+
+/********************************************************************/
+/*  */
+/********************************************************************/
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.container{
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.user{
+    width: calc(100% / 5);
+    max-width: 200px;
+    border: 1px solid;
+    min-height: 150px;
+    flex-grow: 1;
+
+}
+
+
+.user img{
+    width: 100%;;
+}
+
+.pagination{
+    /* background-color: #232427; */
+    position: absolute;
+    top: 50%;
+    padding: 14px 8px;
+    text-align: center;
+}
+
+.pagination.right{
+    right: 0;
+}
+
+.pagination.right i{
+    color: #56C7FF;
+}
+
+.pagination i{
+    font-size: 20px;
+}
+
+.icon-row{
+    text-align: center;
+    position: relative;
+}
+
+.arrow-menu{
+    vertical-align: center;
+    height: 100%;
+}
+
+.float-left{
+    float: left;
+}
+
+.btn{
+    padding: 0 14px;
+    font-size: 15px;
+}
+
+.btn .float-left .icon-row{
+    font-size: 20px;
+}
+
+.arrow-menu.float-left{
+    position: relative;
+    top: 50%;
+    transform: translate(60%, 50%);
+    color: #DCDCDC;
+}
+
+#number-participant{
+    font-size: 10px;
+    position: absolute;
+    top: 0%;
+}
+
+#mini-arrow{
+    font-size: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+.btn.end-meeting{
+    height: 100%;
+    color: #EE756E;
+    background-color: #4B4C4F;
+}
+
+.end-meeting-container{
+    line-height: 54px;
+}
